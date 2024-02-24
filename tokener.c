@@ -2,12 +2,18 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+* tokenize - changes a string to tokens
+* @lineptr: read line from getline function
+*
+* Return: array of strings contains tokens form lineptr
+*/
 char **tokenize(char *lineptr)
 {
 	char *tkn = NULL;
 	char *delim = " \n";
 	char **tokens = NULL;
-	int i = 0, tkn_num = 1, tkn_iter = 0;;
+	int i = 0, tkn_num = 1, tkn_iter = 0;
 
 	while (lineptr[i] != '\0')
 	{
